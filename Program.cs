@@ -111,10 +111,9 @@ class Program
     {
         // Centralize the logic for commands into a separate method.
         await InitCommands();
-
+        var token = Environment.GetEnvironmentVariable("discordToken");
         // Login and connect.
-        await _client.LoginAsync(TokenType.Bot,
-            "ODI0NjE0NzczODYwODU5OTM1.YFx8Wg.tcDwHPJYubVZqbpieYYnAH_gftE");
+        await _client.LoginAsync(TokenType.Bot, token);
         await _client.StartAsync();
 
         // Wait infinitely so your bot actually stays connected.

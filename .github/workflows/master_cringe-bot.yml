@@ -33,3 +33,5 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_8563839a59d44689b27007108bec5039 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
+      env:
+        discordToken: ${{secrets.TOKEN}}
